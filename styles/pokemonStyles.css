@@ -1,0 +1,44 @@
+*
+{
+    margin: 0px;
+    
+}
+table, th, td
+{
+    border: 1px solid black;
+    text-align: center;
+
+}
+.table-container {
+    overflow: scroll;
+    max-height: 43vh;
+    margin-top: 34.5vh;
+}
+.table
+{
+    width: 50%;
+    margin: 0px;
+    
+    
+}
+.td-first-child
+{
+    width: 30%; 
+}
+.td-second-child
+{
+    width: 70%;
+    color: #0AF;
+    font-weight: bold;
+}
+.text-box
+{
+    
+}
+.poke-body
+{
+    background-image: url("../images/720x1280_pokedex_phone_wallpaper_by_rhlpixels-d9wlus2.png");
+    height: 100vh;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+}    
