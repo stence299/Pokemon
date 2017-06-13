@@ -9,18 +9,20 @@ table, th, td
     text-align: center;
 
 }
+
 .table-container {
     overflow: scroll;
     max-height: 43vh;
-    margin-top: 34.5vh;
+    margin-top: 31vh;
 }
+
 .table
 {
+    float: left;
     width: 50%;
-    margin: 0px;
-    
-    
+    margin: 0px;   
 }
+
 .td-first-child
 {
     width: 30%; 
@@ -31,14 +33,132 @@ table, th, td
     color: #0AF;
     font-weight: bold;
 }
-.text-box
-{
-    
-}
 .poke-body
 {
     background-image: url("../images/720x1280_pokedex_phone_wallpaper_by_rhlpixels-d9wlus2.png");
     height: 100vh;
     background-size: 100% 100vh;
     background-repeat: no-repeat;
+    position: relative;
+
 }    
+
+/* this is also picturebox*/
+.picture-container {
+    float: left;
+    height: 40vh;
+    width: 40%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    position: fixed;
+    left: 55%;
+}
+ 
+.pokedex-container  
+{   
+    min-height: 100vh;
+    background-color: #ff3333;
+    border-style: solid;
+    border-width: 5px;
+    position: fixed;
+    width: 100vw;
+}
+
+.top-left-picture-box
+{   
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.pokemon-info
+{   
+    margin-top: 5vh;
+    padding-left: 20px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.text-container
+{
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    list-style-type: none;
+    padding-top: 10px;
+    
+     
+}
+
+.pokemonImage
+{   
+    width: 80%;
+    margin: 10%;
+
+}
+
+.poke-title
+{
+    text-align: center;
+    color: white;
+
+}
+
+.picture_desc_row
+{
+    height: 300px;
+}
+
+.pokemon-description-box
+{
+    height: 100%;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    overflow: scroll;
+}
+
+.container
+{
+    margin-top: 10vh;
+}
+
+.right-text
+{
+    text-align: right;
+}
+
+.pokemon-description
+{
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.real-text-box
+{
+    position: absolute;
+    top: 30vh;
+    width: 25%;
+    left: 20%;
+    width: 200px;
+	height: 4.5vh;
+	background: #afafaf;
+    position: fixed;
+}
+.home-button
+{
+    margin-top: 12px;
+    margin-left: 2.2%;
+    
+}

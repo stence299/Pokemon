@@ -1,17 +1,20 @@
 <div class="poke-body">
-<input class="text-box" type="text" placeholder="Find Pokemon" ng-model="filter">
-<div class="table-container">
-
-<table class="table";>
-    <tr>
-        <th>PkDex#</th>
-        <th>Name</th>
-    </tr>
-    <tr ng-repeat="poke in entries | filter: filter |orderBy: 'pokedex' ">
-        <td ui-sref="pokemon({name: poke.name})" class="td-first-child">{{poke.pokedex}}</td>
-        <td ui-sref="pokemon({name: poke.name})" class="td-second-child">{{ poke.name }}</td>
-    </tr>
-</table>
+    <button class="home-button" ui-sref="home">Home</button>
+    <div class="real-text-box">
+    <input  class="text-box" type="text" placeholder="Find Pokemon" ng-model="filter">
+    </div>
+    <div class="table-container">
+        <table class="table" ;>
+            <tr>
+                <th>PkDex#</th>
+                <th>Name</th>
+            </tr>
+            <tr ng-repeat="poke in entries | filter: filter |orderBy: 'pokedex' ">
+                <td ui-sref="pokemon({name: poke.name})" class="td-first-child">{{poke.pokedex}}</td>
+                <td ng-mouseover="showPicture(poke.name)" ui-sref="pokemon({name: poke.name})" class="td-second-child">{{ poke.name }}</td>
+            </tr>
+        </table>
+        <div class="picture-container" ng-style="pictureBox">
+        </div>
+    </div>
 </div>
-</div>
-<button ui-sref="home">Home</button>
