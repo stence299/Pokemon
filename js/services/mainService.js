@@ -9,7 +9,6 @@ angular.module("pokemonApp")
             var pokemonList = response.data.objects[0].pokemon;
             for (var pokemon of pokemonList) {
                 pokemon.pokedex = parseInt(pokemon.resource_uri.split('/').slice(-2, -1).join(''))
-
             }
             var sortedList = pokemonList.sort(function(a, b) {
                 return a.pokedex - b.pokedex;
@@ -19,9 +18,12 @@ angular.module("pokemonApp")
         })
     }
     this.getPokemon = function(poke){
-        // console.log(BASE_URL + "pokemon/" + poke)
+        console.log(BASE_URL + "pokemon/" + poke)
         return $http.get(BASE_URL + "pokemon/" + poke).then(function(response){
             return response.data
         })
+    }
+    this.getDescription = function(description){
+        return $http.get("http://pokeapi.co" + description)
     }
 })

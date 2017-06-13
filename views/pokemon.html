@@ -1,8 +1,49 @@
-<ul>
-    <li> {{pokemon.name}}</li>
-    <li> {{pokemon.height}}</li>
-    <li> {{pokemon.attack}}</li>
-    <img src="https://img.pokemondb.net/artwork/{{pokemon.sprites[0].name}}.jpg">
-</ul>
-<button ui-sref="pokedex">Pokedex</button>
-<button ui-sref="home">Home</button>
+<div class="pokedex-container">
+    <div>
+    <button ui-sref="pokedex">Pokedex</button>
+    </div>
+    
+    <div class="container">
+        <div class="row picture_desc_row">
+            <div class="col s12 m6 l5">
+                <div class="top-left-picture-box">
+                    <img class="pokemon-image" src="https://img.pokemondb.net/artwork/{{pokemon.sprites[0].name}}.jpg">
+                </div>
+            </div>
+            <div class="col s12 m6 l7">
+                <div  class="pokemon-description-box">
+                    <div class="pokemon-description"><br>    
+                        <p> Description: {{descriptions.description}}</p><br>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="pokemon-info">
+        <div>
+        <ul class=" text-container">
+            
+                <li> Type: {{pokemon.types[1].name}} {{pokemon.types[0].name}}</li>
+                <br>
+                <li> Ability: {{pokemon.abilities[0].name}}</li>
+                <br>
+                <li> Category: {{pokemon.egg_groups[0].name}}</li>
+                <br>
+           </ul> 
+        </div>    
+        <div>
+            <ul class="text-container right-text">
+                
+                <li> Height: {{pokemon.height / 10}}m</li>
+                <br>
+                <li> Weight: {{pokemon.weight / 10}}kg</li>
+                <br>
+                <li> Evolution: {{pokemon.evolutions[0].to}}</li>
+                <br>
+            </ul>
+        </div>
+    </div>
+
+
+    </div>
+    
+</div>
